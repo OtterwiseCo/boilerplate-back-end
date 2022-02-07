@@ -2,8 +2,8 @@
 
 ## Tecnologias
 
-Prisma
-Fastify
+- [Prisma](https://www.prisma.io/)
+- [Fastify](https://fastify.io)
 
 ## Utilização
 
