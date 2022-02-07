@@ -1,4 +1,4 @@
-# Boilerplate de back end da Otterwise
+# Boilerplate de back-end da Otterwise
 
 ## Tecnologias
 
