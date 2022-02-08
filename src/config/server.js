@@ -10,8 +10,11 @@ const app = fastify({
 
 app.register(cors, {
   origin: (origin, cb) => {
-    cb(null, true);
-    return;
+    if (/localhost/.test(origin)) {
+      cb(null, true);
+      return;
+    }
+    cb(new Error("Not allowed"));
   },
 });
 

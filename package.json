@@ -6,12 +6,17 @@
   "author": "João Pedro Bretanha <joaopedro@nave.rs>",
   "license": "MIT",
   "type": "module",
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "prisma:push": "npx prisma db push",
-    "prisma:migrate-dev": "npx prisma migrate dev --name",
-    "prisma:migrate-prod": "npx prisma migrate deploy"
+    "db:push": "npx prisma db push",
+    "db:seed": "npx prisma db seed",
+    "db:migrate-dev": "npx prisma migrate dev --name",
+    "db:migrate-prod": "npx prisma migrate deploy",
+    "studio": "npx prisma studio"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",

@@ -40,7 +40,8 @@ export const login = async (req, reply) => {
 
     let { password: pass, ...data } = user;
     return reply.send({
-      data: { user: data, accessToken: await createAccessToken(data) },
+      user: data,
+      accessToken: await createAccessToken(data),
     });
   } catch (error) {
     console.log(error);

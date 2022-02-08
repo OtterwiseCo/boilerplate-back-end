@@ -22,15 +22,19 @@ Após certificar que o banco reflete seu prisma.schema, utilize o comando `yarn 
 
 ### Scripts
 
-`yarn start`: para rodar a aplicação em modo produção.
+`start`: para rodar a aplicação em modo produção.
 
-`yarn dev`: para rodar a aplicação em modo desenvolvimento utilizando o nodemon.
+`dev`: para rodar a aplicação em modo desenvolvimento utilizando o nodemon.
 
-`prisma:push`: roda o comando `npx prisma db push`, que atualiza seu banco de dados para a ultima versão do seu prisma.schema.
+`db:push`: roda o comando `npx prisma db push`, que atualiza seu banco de dados para a ultima versão do seu prisma.schema.
 
-`prisma:migrate-dev`: espera um nome ao final para que crie uma nova migration com este nome.
+`db:seed`: roda o comando `npx prisma db seed`, que roda as seeds.
 
-`prisma:migrate-prod`: utilizado para aplicar as alterações de migrations em um ambientem de testes ou produção.
+`db:migrate-dev`: espera um nome ao final para que crie uma nova migration com este nome.
+
+`db:migrate-prod`: utilizado para aplicar as alterações de migrations em um ambientem de testes ou produção.
+
+`studio`: executa o comando `npx prisma studio` para abrir o studio do prisma no navegador.
 
 ## Estrutura de pastas
 

@@ -1,25 +1,20 @@
-import { prisma } from "../src/helpers/utils.js";
+import { prisma, hashPassword } from "../src/helpers/utils.js";
 
 const userData = [
   {
-    name: "Alice",
-    email: "alice@prisma.io",
-  },
-  {
-    name: "Nilu",
-    email: "nilu@prisma.io",
-  },
-  {
-    name: "Mahmoud",
-    email: "mahmoud@prisma.io",
+    name: "admin",
+    email: "admin@admin.com",
+    password: "12345",
   },
 ];
 
 async function main() {
   console.log(`Start seeding ...`);
   for (const u of userData) {
+    const hashedPassword = await hashPassword(u.password);
+    const userData = { ...u, password: hashedPassword };
     const user = await prisma.user.create({
-      data: u,
+      data: userData,
     });
     console.log(`Created user with id: ${user.id}`);
   }
